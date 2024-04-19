@@ -107,8 +107,8 @@
                                 <h5 class="text-white text-uppercase mb-3 animated slideInDown">Transport & Logistics Solution</h5>
                                 <h1 class="display-3 text-white animated slideInDown mb-4">Place For Your <span class="text-primary">Logistics</span> Solution</h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Contact</a>
-                                <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">About us</a>
+                                <a href="student_registration.jsp" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Register</a>
+                                <a href="contact.jsp" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contact us</a>
                             </div>
                         </div>
                     </div>
@@ -402,12 +402,12 @@
 
 
     <!-- Quote Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-<!--                     <h6 class="text-secondary text-uppercase mb-3">Get A Quote</h6>
- -->                    <h1 class="mb-5">Contact Us</h1>
+                    <h6 class="text-secondary text-uppercase mb-3">Get A Quote</h6>
+                    <h1 class="mb-5">Contact Us</h1>
                     <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
                     <div class="d-flex align-items-center">
                         <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
@@ -450,7 +450,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Quote End -->
 
 
