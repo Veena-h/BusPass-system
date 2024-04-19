@@ -46,8 +46,9 @@ public class student_registration_servlet extends HttpServlet {
 		String DOB=request.getParameter("dob");
 		String gender=request.getParameter("gender");
 		String email=request.getParameter("email");
-		String password=request.getParameter("password");
-		String dept=request.getParameter("dept");
+		/*
+		 * String password=request.getParameter("password");
+		 */		String dept=request.getParameter("dept");
 		String course=request.getParameter("course");
 		
 		studentRegistration_rentity s=new studentRegistration_rentity();
@@ -58,8 +59,9 @@ public class student_registration_servlet extends HttpServlet {
 		s.setDOB(DOB);
 		s.setGender(gender);
 		s.setEmail(email);
-		s.setPassword(password);
-		s.setCourse(course);
+		/*
+		 * s.setPassword(password);
+		 */		s.setCourse(course);
 		s.setDept(dept);
 		
 		
@@ -70,7 +72,7 @@ public class student_registration_servlet extends HttpServlet {
 			b1=b.insert_studentDetails(s);
 			if(b1)
 			{
-				response.sendRedirect("student_login.jsp");
+				response.sendRedirect("index.jsp");
 			}else
 			{
 				response.sendRedirect("student_registration.jsp");
