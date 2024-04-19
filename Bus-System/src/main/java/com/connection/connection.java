@@ -12,7 +12,7 @@ public class connection
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/bus_system","root","veena");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/bus_system","root","password");
 			
 		} catch (Exception e) {
 			
