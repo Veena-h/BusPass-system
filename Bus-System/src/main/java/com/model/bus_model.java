@@ -28,7 +28,7 @@ public class bus_model
 	public boolean insert_studentDetails(studentRegistration_rentity f) throws SQLException 
 	{
 		boolean b=false;
-		String sql="insert into stud_registartion (fname,lname,address,phone,gender,dob,dept,course,email,password) values(?,?,?,?,?,?,?,?,?,?)";
+		String sql="insert into stud_registartion (fname,lname,address,phone,gender,dob,dept,course,email) values(?,?,?,?,?,?,?,?,?,)";
 		PreparedStatement p=conn.prepareStatement(sql);
 
 		p.setString(1, f.getFirst_name());
@@ -40,8 +40,9 @@ public class bus_model
 		p.setString(7, f.getDept());
 		p.setString(8, f.getCourse());
 		p.setString(9, f.getEmail());
-		p.setString(10, f.getPassword());
-	
+		/*
+		 * p.setString(10, f.getPassword());
+		 */	
 		
 		int i=p.executeUpdate();
 		if(i==1)
@@ -113,8 +114,9 @@ public class bus_model
 		  e.setDept(rs.getString(8));
 		  e.setCourse(rs.getString(9));
 		  e.setEmail(rs.getString(10));
-		  e.setPassword(rs.getString(11));
-		  
+			/*
+			 * e.setPassword(rs.getString(11));
+			 */		  
           //Display values
          al.add(e);
 		  
@@ -528,6 +530,53 @@ public class bus_model
 	   
 		
 	}
+	public boolean delete_busdetails(int id) throws SQLException 
+	{
+		boolean b=false;
+		
+		String sql="delete from bus_details where id=?";
+		PreparedStatement ps=conn.prepareStatement(sql);
+		ps.setInt(1, id);
+	
+		int i=ps.executeUpdate();
+		if(i==1)
+		{
+			System.out.println("deleted successfully");
+			b=true;
+		}
+		return b;
+	}
+	public boolean update_busdetails(BusAdd_entity f) throws SQLException 
+	{
+		boolean b=false;
+		String sql="update bus_details set stop_no=? , stop_name=? , morning_time=?,evening_time=?,bus_fee=? ,driver_name=? where id=?";
+		PreparedStatement p=conn.prepareStatement(sql);
+//		ResultSet rs=p.executeQuery();
+		p.setString(1, f.getStop_no());  
+		p.setString(2, f.getStop_name());
+		
+		p.setString(3, f.getMorning_time());
+		p.setString(4, f.getEvening_time());
+		p.setString(5, f.getBus_fee());
+		p.setString(6, f.getDriver_name());
+		p.setInt(7, f.getId());
+		
+		int i=p.executeUpdate();
+		if(i==1)
+		{
+			System.out.println("updated");
+			b=true;
+			
+		}
+		
+		
+		
+			
+		return b;
+
+	}
+	
+	
 	
 	
 	
