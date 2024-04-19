@@ -57,6 +57,8 @@
 											      <th scope="col">evening-Time</th>
 											      <th scope="col">Bus-Fee</th>
 											       <th scope="col">driver-Name</th> 
+											       
+											     
 											      
                                             </tr>
                                         </thead>
@@ -76,6 +78,8 @@
 											      <td><%=s.getMorning_time() %></td>
 											      <td><%=s.getEvening_time()%> </td>
 											      <td><%=s.getBus_fee() %></td>
+                                                   <td><a href="edit.jsp?id=<%=s.getId() %>" class="btn btn-success">Edit</a></td>
+                                                   <td><a href="delete_servlet?id=<%=s.getId()%>" class="btn btn-danger">Delete</a></td>
                                                 
                                             </tr>
                                        <%
